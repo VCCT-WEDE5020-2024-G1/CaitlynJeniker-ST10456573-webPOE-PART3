@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Get a Quote - CRM CREATIONS</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get a custom quote for printing and branding services at CRM CREATIONS. We offer wallpaper printing, vehicle branding, and vinyl applications.">
+    <meta name="keywords" content="CRM CREATIONS, Get a Quote, printing services, branding, vehicle branding, wallpaper printing, vinyl application, frosted vinyl, sandblast, Cape Town, professional printing, design services">
+    <meta name="author" content="CRM CREATIONS">
+    <meta property="og:title" content="Get a Quote - CRM CREATIONS">
+    <meta property="og:description" content="Request a customized quote for your printing and branding projects. Contact CRM CREATIONS for professional services in Cape Town.">
+    <meta property="og:image" content="images/crm_logo.jpg">
+    <meta property="og:url" content="https://www.crmcreations.co.za/Quote.html">
+    <meta property="og:type" content="website">
+    <style>
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="Quote.html">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header-container">
+        <img src="images/crm_logo.jpg" alt="CRM CREATIONS Logo" class="logo">
+        <h1>CRM CREATIONS</h1>
+        <p>Your Trusted Partner for Professional Printing and Branding Services</p>
+        <hr>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Get a Quote</h2>
+            <p>Fill out the form below to receive a customized quote for your project. We will get back to you as soon as possible with the details.</p>
+            <h3>Our quotes are based on the following:</h3>
+            <p>
+                The surface area to be covered (e.g., size of glass panel/s)<br>
+                The detail in your design/logo<br>
+                The distance from ground level for application<br>
+                The location of the site
+            </p>
+            <form id="quoteForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="service">Service Required:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="wallpaper">Wallpaper Printing & Installation</option>
+                    <option value="vinyl">Frosted Vinyl / Sandblast</option>
+                    <option value="vehicle">Vehicle Branding</option>
+                </select>
+
+                <label for="details">Project Details:</label>
+                <textarea id="details" name="details" rows="5" required></textarea>
+
+                <label for="budget">Estimated Budget:</label>
+                <input type="text" id="budget" name="budget">
+
+                <button type="submit">Request Quote</button>
+            </form>
+
+            <!-- Confirmation Message -->
+            <p id="confirmationMessage" style="color: green; display: none; text-align: center; margin-top: 20px;">Thank you! Your request has been submitted successfully.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p>&copy; 2024 CRM CREATIONS SA.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript to handle form submission
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById('quoteForm');
+            const confirmationMessage = document.getElementById('confirmationMessage');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form from submitting normally
+
+                // Check if the form is filled correctly
+                if (form.checkValidity()) {
+                    console.log("Form is valid and submission is being processed.");
+
+                    // Display the confirmation message
+                    confirmationMessage.style.display = 'block';
+
+                    // Clear the form fields
+                    form.reset();
+                } else {
+                    console.log("Form is incomplete. Please fill all required fields.");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

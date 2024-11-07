@@ -1,0 +1,524 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - CRM CREATIONS</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Contact CRM Creations for professional printing and branding services in South Africa. Reach out via phone, email, or social media.">
+    <meta name="keywords" content="CRM Creations, contact CRM Creations, professional printing, branding services, South Africa, graphic design, vinyl printing, custom signage">
+    <meta name="author" content="CRM Creations">
+    
+    <meta property="og:title" content="Contact Us - CRM CREATIONS">
+    <meta property="og:description" content="Reach out to CRM Creations for expert branding, printing, and vinyl applications in South Africa.">
+    <meta property="og:image" content="images/crm_logo.jpg">
+    <meta property="og:url" content="https://www.crmcreations.co.za/contactus">
+    <meta property="og:type" content="website">
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('images/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+        }
+
+        /* Background styles */
+        body {
+            background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+            background-position: center;
+        }
+
+        /* Glassmorphism card effect */
+        .card {
+            backdrop-filter: blur(7px) saturate(180%);
+            -webkit-backdrop-filter: blur(7px) saturate(180%);
+            background-color: rgba(17, 25, 40, 0.68);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+        }
+
+        /* Header styling */
+        .header-container {
+            text-align: center;
+            color: white;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: rgba(68, 68, 68, 0.8);
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #444;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 10px 0;
+            background-color: rgba(51, 51, 51, 0.8);
+            margin-top: 20px;
+        }
+
+               color: #333;
+        }
+
+        /* Chat Box Styling */
+        #chatBox {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+        }
+
+        #chatBoxHeader {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        #chatMessages {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        #chatInput {
+            display: flex;
+            padding: 10px;
+        }
+
+        #chatInput input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #chatInput button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #chatInput button:hover {
+            background-color: #555;
+        }
+
+        /* Button to open the chat box */
+        #openChatBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #openChatBtn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="Quote.html">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header-container">
+        <img src="images/crm_logo.jpg" alt="CRM CREATIONS Logo" class="logo">
+        <h1>CRM CREATIONS</h1>
+        <p>Your Trusted Partner for Professional Printing and Branding Services</p>
+        <hr>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Information Section -->
+        <section>
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out to us through any of the following methods:</p>
+            <div>
+                <p><strong>Phone:</strong> 0723322728</p>
+                <p><strong>Email:</strong> info@crmcreations.co.za</p>
+                <p><strong>Facebook:</strong> CRM Creations SA</p>
+                <p><strong>Instagram:</strong> crmcreations_za</p>
+                <p><strong>Office Address:</strong> 54 Cricketgally, Grassypark, Cape Town, South Africa</p>
+            </div>
+        </section>
+
+        <!-- Live Chat Section -->
+        <section>
+            <h2>Live Chat</h2>
+            <p>Need immediate assistance? Chat with us live for quick support.</p>
+            <!-- Live Chat Button -->
+    <button id="openChatBtn">💬</button>
+
+    <!-- Chat Box -->
+    <div id="chatBox">
+        <div id="chatBoxHeader">Live Chat <span id="closeChatBtn" style="float: right; cursor: pointer;">X</span></div>
+        <div id="chatMessages"></div>
+        <div id="chatInput">
+            <input type="text" id="chatMessageInput" placeholder="Type a message...">
+            <button id="sendChatMessageBtn">Send</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Live Chat -->
+    <script>
+        // Open/close the chat box functionality
+        const chatBox = document.getElementById('chatBox');
+        const openChatBtn = document.getElementById('openChatBtn');
+        const closeChatBtn = document.getElementById('closeChatBtn');
+        const chatMessages = document.getElementById('chatMessages');
+        const sendChatMessageBtn = document.getElementById('sendChatMessageBtn');
+        const chatMessageInput = document.getElementById('chatMessageInput');
+
+        openChatBtn.addEventListener('click', () => {
+            chatBox.style.display = 'flex'; // Open chat box
+        });
+
+        closeChatBtn.addEventListener('click', () => {
+            chatBox.style.display = 'none'; // Close chat box
+        });
+
+        // Send message when the button is clicked
+        sendChatMessageBtn.addEventListener('click', () => {
+            const message = chatMessageInput.value.trim();
+
+            if (message) {
+                const userMessage = document.createElement('div');
+                userMessage.textContent = `You: ${message}`;
+                chatMessages.appendChild(userMessage);
+                chatMessageInput.value = ''; // Clear the input box
+
+                // Simulate a response from a bot after a short delay
+                setTimeout(() => {
+                    const botMessage = document.createElement('div');
+                    botMessage.textContent = 'Bot: How can I assist you?';
+                    chatMessages.appendChild(botMessage);
+                }, 1000);
+            }
+        });
+    </script>
+        </section>
+
+        <!-- Areas We Cover Section -->
+        <section>
+            <h2>Areas We Cover</h2>
+            <p>We proudly serve the following areas:</p>
+            <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2; margin: 0 auto; padding: 0; list-style: none;">
+                <li>Johannesburg</li>
+                <li>Polokwane</li>
+                <li>Potch</li>
+                <li>Bela Bela</li>
+                <li>Nelspruit</li>
+                <li>Uppington</li>
+                <li>Kimberley</li>
+                <li>Bloemfontein</li>
+                <li>Durban</li>
+                <li>King Williams Town</li>
+                <li>East London</li>
+                <li>Cape Town</li>
+                <li>George</li>
+                <li>Knysna</li>
+                <li>Mossel Bay</li>
+                <li>Grahamstown</li>
+                <li>Port Elizabeth</li>
+                <li>Jeffreys Bay</li>
+            </ul>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Send Us a Message</h2>
+            <p>Send us a REVIEW or ANYTHING concerning the business</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CRM CREATIONS SA.</p>
+    </footer>
+    <script> JavaScript for form submission document.getElementById('contactForm').addEventListener('submit', function(event) { event.preventDefault(); alert('Thank you, we have received your message.'); }); 
+    </script>
+</body>
+</html><!DOCTYPE html>  
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - CRM CREATIONS</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Contact CRM Creations for professional printing and branding services in South Africa. Reach out via phone, email, or social media.">
+    <meta name="keywords" content="CRM Creations, contact CRM Creations, professional printing, branding services, South Africa, graphic design, vinyl printing, custom signage">
+    <meta name="author" content="CRM Creations">
+    
+    <meta property="og:title" content="Contact Us - CRM CREATIONS">
+    <meta property="og:description" content="Reach out to CRM Creations for expert branding, printing, and vinyl applications in South Africa.">
+    <meta property="og:image" content="images/crm_logo.jpg">
+    <meta property="og:url" content="https://www.crmcreations.co.za/contactus">
+    <meta property="og:type" content="website">
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="ContactUs.html">Contact</a></li>
+            <li><a href="Quote.html">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header-container">
+        <img src="images/crm_logo.jpg" alt="CRM CREATIONS Logo" class="logo">
+        <h1>CRM CREATIONS</h1>
+        <p>Your Trusted Partner for Professional Printing and Branding Services</p>
+        <hr>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Information Section -->
+        <section>
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out to us through any of the following methods:</p>
+            <div>
+                <p><strong>Phone:</strong> 0723322728</p>
+                <p><strong>Email:</strong> info@crmcreations.co.za</p>
+                <p><strong>Facebook:</strong> CRM Creations SA</p>
+                <p><strong>Instagram:</strong> crmcreations_za</p>
+                <p><strong>Office Address:</strong> 54 Cricketgally, Grassypark, Cape Town, South Africa</p>
+            </div>
+        </section>
+
+        <!-- Live Chat Section -->
+        <section>
+            <h2>Live Chat</h2>
+            <p>Need immediate assistance? Chat with us live for quick support.</p>
+        </section>
+
+        <!-- Areas We Cover Section -->
+        <section>
+            <h2>Areas We Cover</h2>
+            <p>We proudly serve the following areas:</p>
+            <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2; margin: 0 auto; padding: 0; list-style: none;">
+                <li>Johannesburg</li>
+                <li>Polokwane</li>
+                <li>Potch</li>
+                <li>Bela Bela</li>
+                <li>Nelspruit</li>
+                <li>Uppington</li>
+                <li>Kimberley</li>
+                <li>Bloemfontein</li>
+                <li>Durban</li>
+                <li>King Williams Town</li>
+                <li>East London</li>
+                <li>Cape Town</li>
+                <li>George</li>
+                <li>Knysna</li>
+                <li>Mossel Bay</li>
+                <li>Grahamstown</li>
+                <li>Port Elizabeth</li>
+                <li>Jeffreys Bay</li>
+            </ul>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Send Us a Message</h2>
+            <p>Send us a REVIEW or ANYTHING concerning the business</p>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Form validation
+                if (!name.trim() || !email.trim() || !message.trim()) {
+                    alert("Thank you for contacting us, " + name + "! Your message has been received.");
+                    return;
+                }
+
+                // Simulate form submission success
+                alert("Thank you for contacting us, " + name + "! Your message has been received.");
+
+                // Clear the form
+                form.reset();
+            });
+        });
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CRM CREATIONS SA.</p>
+    </footer>
+
+   
+    </script>
+    </script>
+</body>
+</html>
